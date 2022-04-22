@@ -1,0 +1,8 @@
+h1 結果一覧
+
+table
+  - @users.each do |user|
+    tr
+      td= user.name
+      td= user.win
+      td= user.comment
