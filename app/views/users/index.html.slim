@@ -1,0 +1,19 @@
+.container
+  h1 結果一覧
+
+  .nav.justify-content-end
+    = link_to 'じゃんけんに挑戦', root_path
+
+  .row
+    table.table.table-hover
+      thead.thead-default
+        tr
+          td 名前
+          td 勝利数
+          td コメント
+      tbody
+        - @users.each do |user|
+          tr
+            td= user.name
+            td= user.win
+            td= user.comment
