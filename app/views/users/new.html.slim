@@ -1,0 +1,22 @@
+.container
+  h1 結果の登録
+
+  .nav.justify-content-end
+    = link_to '結果一覧へ', users_path
+
+  - if @user.errors.any?
+    ul
+      - @user.errors.full_messages.each do |msg|
+        li= msg
+
+  = form_with model: @user, local: true do |f|
+    .form-group
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+    .form-group
+      = f.label :win
+      = f.text_field :win, class: 'form-control'
+    .form-group
+      = f.label :comment
+      = f.text_area :comment, class: 'form-control'
+    = f.submit '登録', class: 'btn btn-primary'
