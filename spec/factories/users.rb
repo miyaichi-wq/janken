@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
-    name { "MyString" }
+    name { "miyaichi" }
     win { 1 }
-    comment { "MyText" }
+    comment { "comment" }
   end
 end
