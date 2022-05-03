@@ -1,5 +1,6 @@
 .container
-  h1 じゃんけん
+  h1 じゃんけん結果
+  div 出した手は#{@hand}
   div じゃんけんしよう！最初はグー！
   ul
     li= link_to 'グー', janken_path(hand: 'グー'), data: { turbo_method: :post }
